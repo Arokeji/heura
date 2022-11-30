@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Heura';
+    src: url(./assets/fonts/Heura.woff);
+}
+
+:root{
+    --fontcolor: #000000;
+    --fontcolorhover: #FFFFFF;
+    --maincolor: #f9e021;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Heura';
+    font-size: 27px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: var(--maincolor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    height: 150px;
+}
+
+.logo{
+    height: 1em;
+    margin-left: 1vw;
+}
+
+.menu{
+    list-style: none;
+    margin-right: 2.4vw;
+}
+
+li{
+    display: inline-block;
+    margin: 0px 1vw;
+}
+
+a{
+    text-decoration-color: var(--maincolor);
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    color: var(--fontcolor);
+    transition-duration: 0.3s;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 1024px){
+    .big{
+        display: none;
+    }
+
+    .menu-circle{
+        background-color: #FFFFFF;
+        height: 1em;
+        width: 1em;
+        padding: 1rem;
+        border-radius: 2em;
+        text-align: center;
+    }
+
+    .menu-circle:hover{
+        transition: background-color 0.3s;
+        background-color: #000000;
+    }
+
+    .menu > .mobile:hover{
+        color: #FFFFFF;
+    }
+}
+
+/* Computer */
+
+@media screen and (min-width: 1024px){
+    .mobile{
+        display: none;
+    }
+
+    .item > a:hover{
+        transition-duration: 0.3s;
+        text-decoration-color: var(--fontcolorhover);
+        color: var(--fontcolorhover);
+    }
+}
+
